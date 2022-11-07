@@ -1,0 +1,6 @@
+{
+  "invalidLogin": "Username or password is invalid",
+  "requiredInput": "is required",
+  "requiredPasswordInput": "Enter your password",
+  "requiredConfirmPasswordInput": "Confirm your password"
+}

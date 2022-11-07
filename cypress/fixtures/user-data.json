@@ -1,0 +1,16 @@
+{
+  "invalidUser": {
+    "username": "test",
+    "password": "test"
+  },
+  "validUser": {
+    "username": "Katharina_Bernier",
+    "password": "s3cret"
+  },
+  "newUser": {
+    "firstName": "Tester",
+    "lastName": "Testerski",
+    "username": "test",
+    "password": "test"
+  }
+}
