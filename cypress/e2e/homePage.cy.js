@@ -15,4 +15,16 @@ describe("Home page", () => {
   it("displays transaction tabs", () => {
     HomePage.verifyTransactionTabsAppearance();
   });
+  it.only("allows to create a new transaction", () => {
+    HomePage.clickNewTransactionBtn();
+    cy.fixture("transaction.json").then(({ receiverName, amount, description }) => {
+      HomePage.findContact(receiverName);
+      HomePage.clickFoundContact();
+      HomePage.fillNewTransactionAmountInput(amount);
+      HomePage.fillNewTransactionDescriptionInput(description);
+    });
+    HomePage.clickNewTransactionPayBtn();
+    HomePage.verifySuccessMessageAfterTransaction();
+    HomePage.verifyAccountBalanceAfterTransaction("0.00");
+  });
 });
