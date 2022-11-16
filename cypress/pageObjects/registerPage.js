@@ -3,56 +3,56 @@ class RegisterPage {
     return cy.get("h1").contains("Sign Up");
   }
 
-  get FormFirstName() {
+  get FirstNameInput() {
     return cy.get("#firstName");
   }
 
-  get FormLastName() {
+  get LastNameInput() {
     return cy.get("#lastName");
   }
 
-  get FormUsername() {
+  get UsernameInput() {
     return cy.get("#username");
   }
 
-  get FormPassword() {
+  get PasswordInput() {
     return cy.get("#password");
   }
 
-  get FormConfirmPassword() {
+  get ConfirmPasswordInput() {
     return cy.get("#confirmPassword");
   }
 
-  get FormSignUpBtn() {
+  get SignUpBtnInput() {
     return cy.get("button[data-test='signup-submit']");
   }
 
   fillFirstNameInput(firstName) {
-    this.FormFirstName.type(firstName);
+    this.FirstNameInput.type(firstName);
   }
 
   fillLastNameInput(lastName) {
-    this.FormLastName.type(lastName);
+    this.LastNameInput.type(lastName);
   }
 
   fillUsernameInput(username) {
-    this.FormUsername.type(username);
+    this.UsernameInput.type(username);
   }
 
   fillPasswordInput(password) {
-    this.FormPassword.type(password);
+    this.PasswordInput.type(password);
   }
 
   fillConfirmPasswordInput(confirmPassword) {
-    this.FormConfirmPassword.type(confirmPassword);
+    this.ConfirmPasswordInput.type(confirmPassword);
   }
 
   showAllSignUpFormValidationMessages() {
-    this.FormFirstName.focus();
-    this.FormLastName.focus();
-    this.FormUsername.focus();
-    this.FormPassword.focus();
-    this.FormConfirmPassword.focus();
+    this.FirstNameInput.focus();
+    this.LastNameInput.focus();
+    this.UsernameInput.focus();
+    this.PasswordInput.focus();
+    this.ConfirmPasswordInput.focus();
     this.clickSignUpBtn();
   }
 

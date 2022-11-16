@@ -3,5 +3,6 @@
   "requiredInput": "is required",
   "requiredPasswordInput": "Enter your password",
   "requiredConfirmPasswordInput": "Confirm your password",
-  "transactionSubmitted": "Transaction Submitted!"
+  "transactionSubmitted": "Transaction Submitted!",
+  "userSettings": "User Settings"
 }

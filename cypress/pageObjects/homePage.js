@@ -43,6 +43,10 @@ class HomePage {
     return cy.get('h6[data-test="sidenav-user-balance"]');
   }
 
+  get loggedUserName() {
+    return cy.get('h6[data-test="sidenav-user-full-name"]');
+  }
+
   get transactionSuccessMessage() {
     return cy.get('div[data-test="alert-bar-success"]');
   }
@@ -93,6 +97,26 @@ class HomePage {
 
   verifyTransactionTabsAppearance() {
     this.transactionTabs.should("be.visible");
+  }
+
+  verifyChangedUserName() {
+    cy.fixture("user-data.json").then(({ modifiedUser: { firstName, lastName } }) =>
+      this.loggedUserName.should("contain.text", `${firstName} ${lastName[0]}`)
+    );
+  }
+
+  createNewTransaction(typeOfTransaction) {
+    this.clickNewTransactionBtn();
+    cy.fixture("transaction.json").then(({ receiverName, amount, description }) => {
+      this.findContact(receiverName);
+      this.clickFoundContact();
+      this.fillNewTransactionAmountInput(amount);
+      this.fillNewTransactionDescriptionInput(description);
+    });
+    typeOfTransaction === "pay"
+      ? this.clickNewTransactionPayBtn()
+      : this.clickNewTransactionRequestBtn();
+    this.verifySuccessMessageAfterTransaction();
   }
 }
 

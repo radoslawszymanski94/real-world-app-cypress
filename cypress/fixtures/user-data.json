@@ -12,5 +12,11 @@
     "lastName": "Testerski",
     "username": "test",
     "password": "test"
+  },
+  "modifiedUser": {
+    "firstName": "Alfredo",
+    "lastName": "Segundo",
+    "email": "Norene40@yahoo.com",
+    "phoneNumber": "111-111-1111"
   }
 }
