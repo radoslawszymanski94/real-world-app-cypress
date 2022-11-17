@@ -4,5 +4,6 @@
   "requiredPasswordInput": "Enter your password",
   "requiredConfirmPasswordInput": "Confirm your password",
   "transactionSubmitted": "Transaction Submitted!",
-  "userSettings": "User Settings"
+  "userSettings": "User Settings",
+  "bankAccounts": "Bank Accounts"
 }
